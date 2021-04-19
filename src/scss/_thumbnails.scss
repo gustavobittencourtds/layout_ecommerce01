@@ -1,0 +1,86 @@
+//SEÇÃO THUMBNAILS
+#thumbnails {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2.5rem;
+
+    @media screen and (max-width: $medium){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+    }
+
+    > .thumbnails-circle {
+        transition: 0.5s;
+        width: 13%;
+        margin: 1rem 1.3rem 2rem;
+        border-radius: 50%;
+        position: relative;
+
+        @media screen and (max-width: $medium){
+            width: 60%;
+        }
+
+        > .thumb {
+            @include itemShadow;
+            border-radius: inherit;
+            position: relative;
+
+            > img {
+                width: 100%;
+                display: block;
+                border-radius: inherit;
+            }
+
+            > .thumb-text {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 1.4rem;
+                color: #fff;
+                text-align: center;
+                letter-spacing: 0.1rem;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+                z-index: 2;
+
+                > a {
+                    display: block;
+                    color: #eee;
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    letter-spacing: .2rem;
+                    animation: pulse-effect 1.2s infinite;
+                }
+            }
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+
+        &::before {
+            content: "";
+            border-radius: inherit;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: 1;
+            transition: 0.5s ease;
+        }
+
+        &:hover::before {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        &:hover .thumb-text,
+        &:hover .arrow {
+            opacity: 1;
+        }
+    }
+}

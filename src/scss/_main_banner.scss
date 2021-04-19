@@ -1,0 +1,72 @@
+//BANNER PRINCIPAL
+#main-banner {
+    
+    .swiper-container-main {
+        width: 100%;
+        height: 60vh;
+
+        @media screen and (max-width: $small) {
+            height: 70vh;
+        }
+        .swiper-slide-main {
+            height: inherit;
+            .image {
+                display: flex;
+                width: 100%;
+                height: 60vh;
+                object-fit: cover;
+
+                @media screen and (max-width: $small) {
+                    height: 80vh;
+                }
+            }
+        }
+    }
+
+    //arrows
+    --swiper-theme-color: #ccc;
+    --swiper-navigation-size: 1.6rem;
+    .swiper-button-prev,
+    .swiper-container-rtl .swiper-button-next {
+        left: 2rem;
+        right: auto;
+        outline: none;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 1.5rem;
+        border-radius: 50%;
+        transition: 0.4s ease;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+        }
+    }
+    .swiper-button-next,
+    .swiper-container-rtl .swiper-button-prev {
+        right: 2rem;
+        left: auto;
+        outline: none;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 1.5rem;
+        border-radius: 50%;
+        transition: 0.4s ease;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+        }
+    }
+
+    //bullets
+    .swiper-pagination-bullet {
+        width: .6rem;
+        height: .6rem;
+        opacity: 0.5;
+        outline: none;
+    }
+    .swiper-container-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+        bottom: 1rem;
+    }
+}

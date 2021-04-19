@@ -1,0 +1,161 @@
+//FOOTER
+#footer {
+    
+    >.footer-title {
+        position: relative;
+        border-top: solid 1px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 6rem;
+
+        >.logo {
+            padding: 0 1rem;
+            position: absolute;
+            top: -10px;
+            text-transform: uppercase;
+            font-size: 3.5rem;
+            color: var(--darkblue);
+            z-index: 9;
+            @include background-gradient;
+        }
+    }
+
+    > .footer-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 100%;
+        padding: 0 3rem;
+
+        @media screen and (max-width: $small){
+            @include flexColumn;
+            @include justify-align-center;
+            
+            //formulário de email
+            :nth-child(2){
+                order: 3;
+            }
+        }
+
+        > .navigation-section {
+            @include flexColumn;
+
+            @media screen and (max-width: $small){
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+
+            >.navigation-title {
+                color: var(--darkblue);
+                font-size: 2.2rem;
+                margin-bottom: 1.5rem;
+                text-transform: uppercase;
+
+                @media screen and (max-width: $small){
+                    font-size: 2rem;
+                    line-height: 4rem;
+                }
+            }
+
+            > .navigation-links {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                @media screen and (max-width: $small){
+                    @include flexColumn;
+                    @include justify-align-center;
+                }
+
+                > li {
+                    display: flex;
+                    align-items: center;
+                    margin: 0.5rem;
+                    transition: 0.5s;
+                    position: relative;
+                    > a {
+                        padding: 0.2rem;
+                        text-transform: uppercase;
+                        font-size: 1.5rem;
+                        color: var(--darkblue);
+
+                        &::after {
+                            content: "";
+                            display: block;
+                            height: .1rem;
+                            left: 50%;
+                            position: absolute;
+                            bottom: 0;
+                            background: var(--darkblue);;
+                            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                            width: 0;
+                        }
+
+                        &:hover:after {
+                            width: 100%;
+                            left: 0;
+                        }
+                    }
+                }
+
+                //Redes Sociais - Menu Hover
+                .socialMedia {
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+
+                    > a {
+                        &:hover:after {
+                            width: 0;
+                        }
+                    }
+                }
+            }
+
+            //Cadastrar Email
+
+            
+            > .newsletter {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                order: 3;
+                
+
+                > .newsletter-email {
+                    font-size: 1.5rem;
+                    width: 28vh;
+                    background: transparent;
+                    border: none;
+                    border-bottom: solid 1px var(--darkblue);
+                    outline: none;
+                    font-style: italic;
+                    padding: 0.5rem;
+                }
+
+                > .newsletter-btn {
+                    font-size: 1.5rem;
+                    display: block;
+                    background: transparent;
+                    color: var(--darkblue);
+                    border: none;
+                    cursor: pointer;
+                    font-style: italic;
+                    &:hover {
+                        animation: pulse-effect 1.5s infinite;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        background: var(--lightgreen);
+        color: var-(--darkblue);
+        font-style: italic;
+        @include justify-align-center;
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        padding: 1rem 0;
+    }
+}
+

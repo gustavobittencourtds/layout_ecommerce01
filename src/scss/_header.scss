@@ -1,0 +1,252 @@
+//HEADER
+#main-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    transition: all .5s ease;
+    width: 100%;
+    //logo
+    .logo {
+       
+       
+
+        > a {
+           
+            > h1 {
+                font-size: 4rem;
+                line-height: 4rem;
+                text-transform: uppercase;
+                color: var(--darkblue);
+            }
+        }
+
+        @media screen and (max-width: $small) {
+            text-align: center;
+            order: 2;
+        }
+
+        @media screen and (max-width: $very-small) {
+            flex-basis: 90%;
+            text-align: right;
+        }
+    }
+
+    //Menu Section
+    .nav {
+        
+        @media screen and (max-width: $medium) {
+            flex-basis: 100%;
+            margin: 1.5rem 0;
+            order: 3;
+        }
+
+        @media screen and (max-width: $small) {
+            flex-basis: auto;
+            order: 1;
+        }
+
+        .nav-burger {
+            cursor: pointer;
+            @media screen and (max-width: $small) {
+                width: 2rem;
+                height: 2rem;
+            }
+
+            .one,
+            .two,
+            .three {
+                @media screen and (max-width: $small) {
+                    background: var(--darkblue);
+                    height: 2px;
+                    width: 100%;
+                    margin: 5px auto;
+                    transition: 0.5s linear;
+                }
+            }
+        }
+
+        //Barra de navegação
+        > .nav-bar {
+            display: flex;
+            align-items: center;
+            align-self: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @media screen and (max-width: $small) {
+                position: absolute;
+                top: 6.8rem;
+                left: 0;
+                transform: translateX(100%);
+                transition: all 0.8s ease;
+                width: 100vw;
+                height: 100vh;
+                z-index: 999;
+                opacity: 0;
+                @include flexColumn;
+                justify-content: center;
+            }
+
+            > li {
+                position: relative;
+                margin: 0 1rem;
+
+                @media screen and (max-width: $small) {
+                    margin-bottom: 3rem;
+                }
+
+                > .nav-link {
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                    color: var(--darkblue);
+                    padding: 0.5rem;
+
+                    @media screen and (max-width: $small) {
+                        display: block;
+                        font-size: 2rem;
+                        opacity: 0;
+                    }
+
+                    &::after {
+                        bottom: 0;
+                        content: "";
+                        display: block;
+                        height: 1px;
+                        left: 50%;
+                        position: absolute;
+                        background: var(--darkblue);
+                        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                        width: 0;
+                    }
+
+                    &:hover:after {
+                        width: 100%;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    //Menu mobile
+    .nav.open {
+        max-height: 100vh;
+        .nav-burger {
+            .one {
+                transform: rotate(45deg) translate(8px, 3px);
+            }
+
+            .two {
+                opacity: 0;
+            }
+
+            .three {
+                transform: rotate(-45deg) translate(7px, -2px);
+            }
+        }
+
+        .nav-bar {
+            transform: translateX(0);
+            opacity: 1;
+            position: fixed;
+            background: var(--lightgreen);
+            transition: all 0.8s ease;
+            .nav-link {
+                opacity: 1;
+                line-height: 5rem;
+                font-size: 3rem;
+            }
+        }
+    }
+
+    //Menu do usuário
+    .user-menu {
+
+        line-height: 4rem;
+        display: flex;
+        justify-content: flex-end;
+        width: 5%;
+
+        @media screen and (max-width: $medium) {
+            flex-basis: auto;
+            order: 2;
+        }
+
+        @media screen and (max-width: $very-small) {
+            flex-basis: 100%;
+            margin-top: 2rem;
+        }
+
+        > ul {
+            display: flex;
+
+            .menu-user-icon {
+                margin: 0 0.5rem;
+                transition: 0.5s;
+
+                > svg{
+                    width: 22px;
+                    height: 22px;
+                    fill: var(--darkblue);
+                }
+
+                &:hover {
+                    transform: scale(1.4);
+                }
+            }
+
+            > .menu-user-search {
+                display: flex;
+                align-items: center;
+
+                > #search-field {
+                    cursor: default;
+                    pointer-events: none;
+                    opacity: 0;
+                    transition: opacity .5s ease;
+                    font-size: 1.3rem;
+                    background: transparent;
+                    border: none;
+                    border-bottom: solid 1px var(--darkblue);
+                    padding: 0.6rem;
+                    outline: none;
+                    width: 98px;
+
+                    @media screen and (max-width: $small) {
+                        width: 60px;
+                    }
+
+                    &::placeholder {
+                        color: var(--darkgrey);
+                        opacity: 0;
+                        transition: opacity .3s ease-out;
+                    }
+
+                    &:focus::placeholder {
+                        opacity: 1;
+                    }
+
+                    &:focus,
+                    &:not(:placeholder-shown) {
+                        cursor: text;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Header sticky
+#main-header.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background: var(--lightgreen);
+
+    .nav.open .navbar{
+        background: var(--lightgreen);
+    }
+}

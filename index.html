@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja - Ecommerce</title>
+
+    <!-- 
+    <link rel="stylesheet" href="dist/style.min.css"> -->
+    <link rel="stylesheet" href="dist/css/main.min.css">
+
+    <link rel="icon" href="src/img/icons/favicon.ico" type="image/x-icon">
+
+    <!-- Fonte PT Sans-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+
+    <!--swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+</head>
+
+<body>
+    <!--header-->
+    <header id="main-header">
+        <div class="logo">
+            <a href="#" alt="Logo Vnda">
+                <h1>Logo</h1>
+            </a>
+        </div>
+
+        <nav class="nav">
+
+            <div class="nav-burger">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
+
+            <ul class="nav-bar">
+                <li><a class="nav-link" href="#" alt="menu">lorem</a></li>
+                <li><a class="nav-link" href="#" alt="menu">ipsum</a></li>
+                <li><a class="nav-link" href="#" alt="menu">dolor</a></li>
+                <li><a class="nav-link" href="#" alt="menu">sit</a></li>
+                <li><a class="nav-link" href="#" alt="menu">amet</a></li>
+            </ul>
+        </nav>
+
+        <section class="user-menu">
+            <ul>
+                <div class="menu-user-search" alt="busca">
+                    <input id="search-field" type="text" placeholder="Busca . . .">
+                    <a class="menu-user-icon" id="search-icon" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 263.419 228.808">
+                            <path id="Icon_awesome-search" data-name="Icon awesome-search"
+                                d="M264.616,223.882l-52.242-50.42a12.8,12.8,0,0,0-8.908-3.54h-8.541a102.377,102.377,0,0,0,23.056-64.732C217.981,47.082,169.2,0,108.99,0S0,47.082,0,105.189,48.784,210.379,108.99,210.379a110.975,110.975,0,0,0,67.071-22.252v8.243a11.916,11.916,0,0,0,3.668,8.6l52.242,50.42a12.845,12.845,0,0,0,17.763,0l14.829-14.312a11.9,11.9,0,0,0,.052-17.194ZM108.99,169.921c-37.046,0-67.071-28.927-67.071-64.732,0-35.754,29.972-64.732,67.071-64.732,37.046,0,67.071,28.927,67.071,64.732C176.061,140.944,146.089,169.921,108.99,169.921Z"/>
+                        </svg>
+
+                    </a>
+                </div>
+                <a class="menu-user-icon" href="#" alt="usuário">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.523 258.653">
+                        <path id="Icon_awesome-user-circle" data-name="Icon awesome-user-circle"
+                            d="M141.762.562C63.45.562,0,58.446,0,129.889S63.45,259.215,141.762,259.215s141.762-57.884,141.762-129.326S220.074.562,141.762.562Zm0,50.062c27.781,0,50.3,20.546,50.3,45.89s-22.522,45.89-50.3,45.89-50.3-20.546-50.3-45.89S113.981,50.624,141.762,50.624Zm0,179.388c-33.554,0-63.621-13.871-83.742-35.565,10.746-18.46,31.782-31.184,56.3-31.184a15.228,15.228,0,0,1,4.059.574,77.752,77.752,0,0,0,46.758,0,15.228,15.228,0,0,1,4.058-.574c24.522,0,45.558,12.724,56.3,31.184C205.383,216.141,175.316,230.013,141.762,230.013Z"
+                            transform="translate(0 -0.563)" />
+                    </svg>
+                </a>
+                <a class="menu-user-icon" href="#" alt="sacola de compras">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 263.419 228.808">
+                        <path id="Icon_material-shopping-basket" data-name="Icon material-shopping-basket"
+                            d="M195.592,87.175,143.148,8.093A11.86,11.86,0,0,0,133.21,3.03a11.678,11.678,0,0,0-9.938,5.184L70.827,87.175H13.474A12.05,12.05,0,0,0,1.5,99.231a10.217,10.217,0,0,0,.479,3.255L32.392,214.238a23.839,23.839,0,0,0,22.989,17.6H211.038a24.088,24.088,0,0,0,23.109-17.6L264.56,102.486l.359-3.255a12.05,12.05,0,0,0-11.974-12.055Zm-98.3,0L133.21,34.132l35.921,53.043Zm35.921,96.442a24.111,24.111,0,1,1,23.947-24.11A24.1,24.1,0,0,1,133.21,183.617Z"
+                            transform="translate(-1.5 -3.03)" />
+                    </svg>
+
+                </a>
+            </ul>
+        </section>
+    </header>
+
+    <!--main banner-->
+    <section id="main-banner">
+        <div class="swiper-container swiper-container-main">
+
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide swiper-slide-main">
+                    <a href="#"><img src="src/img/main-banner-1.jpg" alt="" class="image"></a>
+                </div>
+                <div class="swiper-slide swiper-slide-main">
+                    <a href="#"><img src="src/img/main-banner-2.jpg" alt="" class="image"></a>
+                </div>
+                <div class="swiper-slide swiper-slide-main">
+                    <a href="#"><img src="src/img/main-banner-3.jpg" alt="" class="image"></a>
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <!-- thumbnails -->
+    <section id="thumbnails">
+        <div class="thumbnails-circle">
+            <div class="thumb">
+                <img src="src/img/thumb-1.jpg" alt="">
+                <p class="thumb-text">Lorem ipsum dolor sit</p>
+            </div>
+        </div>
+        <div class="thumbnails-circle">
+            <div class="thumb">
+                <img src="src/img/thumb-2.jpg" alt="">
+                <p class="thumb-text">Lorem ipsum dolor sit</p>
+
+            </div>
+        </div>
+        <div class="thumbnails-circle">
+            <div class="thumb">
+                <img src="src/img/thumb-3.jpg" alt="">
+                <p class="thumb-text">Lorem ipsum dolor sit</p>
+
+            </div>
+        </div>
+        <div class="thumbnails-circle">
+            <div class="thumb">
+                <img src="src/img/thumb-4.jpg" alt="">
+                <p class="thumb-text">Lorem ipsum dolor sit</p>
+
+            </div>
+        </div>
+        <div class="thumbnails-circle">
+            <div class="thumb">
+                <img src="src/img/thumb-5.jpg" alt="">
+                <p class="thumb-text">Lorem ipsum dolor sit</p>
+
+            </div>
+        </div>
+        <div class="thumbnails-circle">
+            <div class="thumb">
+                <img src="src/img/thumb-6.jpg" alt="">
+                <p class="thumb-text"><a href="#">View More</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- catalog-->
+    <section id="catalog">
+        <article class="catalog-description">
+            <span class="description-info">Lorem ipsum lorem dolor</span>
+            <h2 class="description-title">Lorem ipsum dolor sit amet</h2>
+            <p class="description-content"> Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna
+                aliqua. Metus vulputate eu scelerisque
+                felis imperdiet proin fermentum. Praesent
+                semper feugiat nibh sed pulvinar proin
+                gravida.</p>
+            <p class="description-content"> Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna
+                aliqua. Metus vulputate eu scelerisque
+                felis imperdiet proin fermentum. Praesent
+                semper feugiat nibh sed pulvinar proin
+                gravida.</p>
+
+            <a class="catalog-arrow" href="#news"><img src="src/img/icons/icon-arrow-down.svg" alt=""></a>
+        </article>
+        <div class="catalog-items">
+
+            <div class="catalog-card first">
+                <div class="card-image">
+                    <img src="src/img/catalogo-img-1.jpg" alt="">
+                    <a class="card-link" href="#"> View More </a>
+                </div>
+                <div class="card-text">
+                    <h4 class="card-title">Labore et Dolore</h4>
+                    <p class="card-description">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempo.</p>
+                </div>
+            </div>
+
+            <div class="catalog-card second">
+                <div class="card-image">
+                    <img src="src/img/catalogo-img-2.jpg" alt="">
+                    <a class="card-link" href="#"> View More </a>
+                </div>
+                <div class="card-text">
+                    <h4 class="card-title">Labore et Dolore</h4>
+                    <p class="card-description">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempo.</p>
+                </div>
+            </div>
+
+            <div class="catalog-card third">
+                <div class="card-image">
+                    <img src="src/img/catalogo-img-3.jpg" alt="">
+                    <a class="card-link" href="#"> View More </a>
+                </div>
+                <div class="card-text">
+                    <h4 class="card-title">Labore et Dolore</h4>
+                    <p class="card-description">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempo.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--News-->
+    <section id="news">
+        <div class="news-content">
+            <div class="news-card">
+                <img class="front" src="src/img/news-1.jpg" alt="produto destaque">
+                <img class="back" src="src/img/news-2.jpg" alt="produto destaque">
+                <a class="image-link" href="#">View More</a>
+            </div>
+            <div class="news-text">
+                <span class="news-info">Lorem ipsum lorem dolor</span>
+                <h2 class="news-title">Lorem ipsum dolor sit amet</h2>
+                <p class="news-description">Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna
+                    aliqua. Metus vulputate eu scelerisque
+                    felis imperdiet proin fermentum. Praesent
+                    semper feugiat nibh sed pulvinar proin
+                    gravida.</p>
+                <button class="news-btn">Click here!</button>
+            </div>
+
+            <div class="news-card-details">
+                <div class="swiper-container swiper-container-news">
+
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide swiper-slide-news">
+                            <img src="src/img/news-slide-1.jpg" alt="">
+                        </div>
+                        <div class="swiper-slide swiper-slide-news">
+                            <img src="src/img/news-slide-2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev swiper-button-prev-news"></div>
+                    <div class="swiper-button-next swiper-button-next-news"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!--Instagram-->
+    <section id="instagram">
+        <div class="instagram-title">
+            <a href="#">@instadamarca</a>
+        </div>
+        <div class="instagram-items">
+            <div class="instagam-card">
+                <img class="card-photo" src="src/img/insta-1.jpg" alt="imagem do produto">
+                <div class="card-overlay"></div>
+                <div class="card-description">
+                    <div class="card-text">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna
+                        aliqua.</div>
+                    <a class="card-btn" href="#"> View More </a>
+                </div>
+            </div>
+            <div class="instagam-card">
+                <img class="card-photo" src="src/img/insta-2.jpg" alt="imagem do produto">
+                <div class="card-overlay"></div>
+                <div class="card-description">
+                    <div class="card-text">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna
+                        aliqua.</div>
+                    <a class="card-btn" href="#"> View More </a>
+                </div>
+            </div>
+            <div class="instagam-card">
+                <img class="card-photo" src="src/img/insta-3.jpg" alt="imagem do produto">
+                <div class="card-overlay"></div>
+                <div class="card-description">
+                    <div class="card-text">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna
+                        aliqua.</div>
+                    <a class="card-btn" href="#"> View More </a>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <!-- Footer-->
+    <section id="footer">
+        <div class="footer-title">
+            <h3 class="logo">Logo</h3>
+        </div>
+        <div class="footer-navigation">
+            <div class="navigation-section">
+                <h4 class="navigation-title">Lorem</h4>
+                <ul class="navigation-links">
+                    <li><a href="">lorem</a></li>
+                    <li> <a href="">ipsum</a></li>
+                    <li><a href="">lorem</a></li>
+                    <li><a href="">dolor</a></li>
+                </ul>
+            </div>
+            <div class="navigation-section">
+                <h4 class="navigation-title">Ipsum</h4>
+                <form class="newsletter">
+                    <input class="newsletter-email" type="text" placeholder="Email">
+                    <button class="newsletter-btn" type="submit">Email ></button>
+                </form>
+            </div>
+            <div class="navigation-section">
+                <h4 class="navigation-title">Dolor</h4>
+                <ul class="navigation-links">
+                    <li class="socialMedia">
+                        <img src="src/img/icons/icon-instagram.svg" alt="Instagram">
+                        <a href="">lorem</a>
+                    </li>
+                    <li class="socialMedia">
+                        <img src="src/img/icons/icon-facebook.svg" alt="Facebook">
+                        <a href="">ipsum</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="copyright">@Loja - Tecnologia para ecommerce - CNPJ 00.0000.000/0001-00</p>
+    </section>
+
+    <!--swiper-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="dist/js/main.min.js"></script>
+
+
+
+</body>
+
+</html>
